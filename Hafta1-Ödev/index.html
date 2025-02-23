@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- MOBILE SCREEN -->
+    <input type="checkbox" id="menu" />
+    <!-- END MOBILE SCREEN -->
+    <header>
+      <div class="logo">
+        <h1>Film<span>ler</span></h1>
+      </div>
+      <!-- MOBILE SCREEN -->
+      <label for="menu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </label>
+      <!-- END MOBILE SCREEN -->
+      <nav>
+        <ul>
+          <li><a href="#Anasayfa">Anasayfa</a></li>
+          <li><a href="#Favoriteepisode">Favori Bölüm</a></li>
+          <li><a href="#Bölümler">Bölümler</a></li>
+        </ul>
+        <a href="#" class="profile-icon">
+          <i class="fa-solid fa-user"></i>
+        </a>
+      </nav>
+    </header>
+
+    <section id="Anasayfa">
+      <div class="main-container">
+        <div class="container-img">
+          <img
+            src="https://sinekafe.com/wp-content/uploads/2021/12/la-casa.jpeg"
+          />
+        </div>
+        <div class="container-content">
+          <h4>
+            <a
+              class="movie-title"
+              href="https://www.imdb.com/title/tt6468322/"
+              target="_blank"
+              >La Casa De Papel (Büyük Soygun)</a
+            >
+          </h4>
+          <p class="movie-summary">
+            <span>Filmin Konusu :</span>
+            Profesör olarak adlandırılan bir suç dehası, tarihin en büyük
+            soygununu yapmayı planlar. Amacı İspanya Kraliyet Darphanesine
+            girmektir. Bunun için de işlerinde uzman olan 8 suçludan oluşan bir
+            ekip kurar. Ekip, 5 aylık bir eğitim sürecinden geçer ve bu sürede
+            her ihtimali hesaba katarak soygunu kusursuz bir hale getirirler.
+            Artık her şey hazırdır. 8 kişi, rehineleri de yanlarına alarak
+            kendilerini İspanya Kraliyet Darphanesine kilitler. Fakat hiç hesaba
+            katmadıkları olaylar gerçekleşir.
+          </p>
+          <br />
+          <h3>En Sevilen Oyuncular</h3>
+
+          <div class="actors">
+            <div class="card">
+              <a href="#">
+                <div class="img1">
+                  <img
+                    src="https://www.bidolubaski.com/sites/default/files/u61150/professor.png"
+                  />
+                </div>
+                <div class="title">Profosör</div>
+                <div class="text">
+                  Soygunlar için plan yapar. Zeki ve kurnaz. Saf bir yönü var.
+                </div>
+              </a>
+            </div>
+
+            <div class="card">
+              <a href="#">
+                <div class="img1">
+                  <img
+                    src="https://www.bidolubaski.com/sites/default/files/u61150/tokio.png"
+                  />
+                </div>
+                <div class="title">Tokyo</div>
+                <div class="text">
+                  Baskın, yönetici karakter. Profesörün görünmeyen sağ kolu.
+                </div>
+              </a>
+            </div>
+
+            <div class="card">
+              <a href="#">
+                <div class="img1">
+                  <img
+                    src="https://www.bidolubaski.com/sites/default/files/u61150/rio.png"
+                  />
+                </div>
+                <div class="title">Rio</div>
+                <div class="text">
+                  Güvenlik uzmanı ve hacker. Sistemlerin açıklarını hızla tespit
+                  edip bu açıkları değerlendirebilen yetenekli bir karakter.
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-container" id="Favoriteepisode">
+        <div class="favorite-episode">
+          <h3>En Favori Bölüm</h3>
+          <br />
+          <h4>La Casa de Papel 4. Sezon, 6. Bölüm ("KO Teknikleri")</h4>
+          <p>
+            Nairobi, 3. sezonun sonunda vurulduktan sonra ekibin çabalarıyla
+            hayatta kalmayı başarmıştı. Sergio (Profesör), dışarıda kaosun
+            içindeyken içeride rehinelerin kontrolünü sağlamak ve soygunu devam
+            ettirmek ekibin elinde. Ancak, içlerindeki en büyük tehdit olan
+            Gandía (Bankanın güvenlik şefi) esaretten kaçmayı başarıyor ve
+            içeridekiler için büyük bir tehlike oluşturuyor. Nairobi, bu süreçte
+            tekrar ekibine destek olmaya ve soyguna devam etmeye çalışıyor.
+            Fakat Gandía, onu rehin alıyor ve diğer ekip üyelerinin gözleri
+            önünde infaz ediyor. Gandía, Nairobi’nin kafasına tek bir kurşun
+            sıkarak onu öldürüyor. Ekip, Nairobi’yi kaybetmenin acısını derinden
+            yaşarken öfkeye kapılıyor ve Gandía’dan intikam almak için harekete
+            geçiyor.
+          </p>
+          <br />
+
+          <iframe
+            class="youtube-link"
+            src="https://www.youtube.com/embed/L2uZqvrNFjE"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="Bölümler">
+      <h3>Dizinin Bölümleri</h3>
+      <br />
+      <div class="container">
+        <div class="movie_card" id="tomb">
+          <div class="info_section">
+            <div class="movie_header">
+              <img
+                class="locandina"
+                src="https://tr.web.img3.acsta.net/r_1920_1080/pictures/20/04/30/11/30/5931496.jpg"
+              />
+              <h1>1.Bölüm "El Profesor"</h1>
+
+              <span class="minutes">125 dk</span>
+            </div>
+            <div class="movie_desc">
+              <p class="text">
+                Profesör, İspanyol Kraliyet Darphanesi'ni hedef alan büyük bir
+                soygun için genç bir kadın soyguncuyu ve diğer yedi suçluyu işe
+                alır.
+              </p>
+            </div>
+
+            <button class="fav-button">
+              Fvaorilere ekle
+            </button>
+          </div>
+        </div>
+
+        <div class="movie_card" id="tomb">
+          <div class="info_section">
+            <div class="movie_header">
+              <img
+                class="locandina"
+                src="https://tr.web.img3.acsta.net/r_1920_1080/pictures/20/04/30/11/30/5889245.jpg"
+              />
+              <h1>2.Bölüm "Imprudencias letales" (Ölümcül Tedbirsizlikler)</h1>
+
+              <span class="minutes">125 min</span>
+            </div>
+            <div class="movie_desc">
+              <p class="text">
+                Rehine arabulucusu Raquel, Profesör'le ilk teması kurar.
+                Rehinelerden biri, hırsızların planları için son derece
+                önemlidir.
+              </p>
+            </div>
+            <button class="fav-button">
+              Favorilere Ekle
+            </button>
+          </div>
+        </div>
+
+        <div class="movie_card" id="tomb">
+          <div class="info_section">
+            <div class="movie_header">
+              <img
+                class="locandina"
+                src="https://tr.web.img4.acsta.net/r_1920_1080/pictures/20/04/30/11/30/5867337.jpg"
+              />
+              <h1>3.Bölüm "Errar al disparar" (Ateş Ederken Iskalamak)</h1>
+              <span class="minutes">125 min</span>
+            </div>
+            <div class="movie_desc">
+              <p class="text">
+                Raquel, eski eşiyle yaşadığı kişisel bir krizden olumsuz
+                etkilenir. Rehineler kulak misafiri oldukları silah seslerinden
+                korkar. Hırsızlar kendi aralarında tartışır.
+              </p>
+            </div>
+            <button class="fav-button" ">
+              Favorilere Ekle
+            </button>
+          </div>
+        </div>
+
+        <div class="movie_card" id="tomb">
+          <div class="info_section">
+            <div class="movie_header">
+              <img
+                class="locandina"
+                src="https://tr.web.img3.acsta.net/r_1920_1080/pictures/20/04/30/11/30/5889245.jpg"
+              />
+              <h1>4.Bölüm "Caballo de Troya" (Truva Atı)</h1>
+
+              <span class="minutes">125 min</span>
+            </div>
+            <div class="movie_desc">
+              <p class="text">
+                Hırsızlar bir sağlık ekibinin darphaneye girmesine izin verir.
+                Ekiple birlikte sivil bir polis de darphaneye sızar. Profesör,
+                Raquel'in bir adım önünde kalmaya çalışır.
+              </p>
+            </div>
+            <button class="fav-button" >
+              Favorilere Ekle
+            </button>
+          </div>
+        </div>
+
+        <div class="movie_card" id="tomb">
+          <div class="info_section">
+            <div class="movie_header">
+              <img
+                class="locandina"
+                src="https://tr.web.img3.acsta.net/r_1920_1080/pictures/20/04/30/11/30/5889245.jpg"
+              />
+              <h1>5.Bölüm "El día de la marmota" (Günışığı Sonsuza Dek)</h1>
+
+              <span class="minutes">125 min</span>
+            </div>
+            <div class="movie_desc">
+              <p class="text">
+                Rio, televizyonda izlediği haberlerden rahatsız olur.
+                Soruşturmada yaşanan ani bir gelişme ve hırsızlardan birinin
+                yaptığı hata, Profesör'ü kimliğini açığa çıkartabilecek ciddi
+                bir riskle karşı karşıya bırakır
+              </p>
+            </div>
+            <button class="fav-button">
+              Favorilere Ekle
+            </button>
+          </div>
+        </div>
+
+        <div class="movie_card" id="tomb">
+          <div class="info_section">
+            <div class="movie_header">
+              <img
+                class="locandina"
+                src="https://tr.web.img3.acsta.net/r_1920_1080/pictures/20/04/30/11/30/5889245.jpg"
+              />
+              <h1>5.Bölüm "El día de la marmota" (Günışığı Sonsuza Dek)</h1>
+
+              <span class="minutes">125 min</span>
+            </div>
+            <div class="movie_desc">
+              <p class="text">
+                Rio, televizyonda izlediği haberlerden rahatsız olur.
+                Soruşturmada yaşanan ani bir gelişme ve hırsızlardan birinin
+                yaptığı hata, Profesör'ü kimliğini açığa çıkartabilecek ciddi
+                bir riskle karşı karşıya bırakır
+              </p>
+            </div>
+           
+            <button class="fav-button">
+              Favorilere Ekle
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="footer">
+      <div class="container">
+        <p>Elif Naz Demir</p>
+        <div class="social-media">
+          <a href="https://www.linkedin.com/in/elifnazdemir00/" target="_blank"
+            ><i class="fa-brands fa-linkedin-in fa-lg"></i
+          ></a>
+          <a
+            href="https://github.com/Elifnaz00?tab=repositories"
+            target="_blank"
+            ><i class="fa-brands fa-github fa-lg"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let buttons = document.querySelectorAll('.fav-button');
+      buttons.forEach((item) =>
+        item.addEventListener('click', function (e) {
+          e.target.setAttribute('style', 'background: red');
+        })
+      );
+
+     
+    </script>
+  </body>
+</html>
