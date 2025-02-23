@@ -1,1 +1,0 @@
-# InsiderTestiniumBootcamp-devHafta1
