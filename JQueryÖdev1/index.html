@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style></style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="table-container">
+            <div class="table-container-content">
+                <table id="student-table">
+                    <thead>
+                        <tr>
+                            <th>Öğrencinin Adı</th>
+                            <th>Öğrencinin Soyadı</th>
+                            <th>Öğrencinin Sınıfı</th>
+                            <th>Matematik Notu</th>
+                            <th>Türkçe Notu</th>
+                            <th>Fen Notu</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+
+                </table>
+
+            </div>
+            <div class="add-student-container">
+                
+                <form id="add-student-form">
+                    <input type="text" id="student-name" placeholder="Öğrencinin Adı">
+                    <input type="text" id="student-surname" placeholder="Öğrencinin Soyadı">
+                    <input type="text" id="student-class" placeholder="Öğrencinin Sınıfı">
+                    <input type="text" data-grade id="math-grade" placeholder="Matematik Notu">
+                    <input type="text" data-grade id="turkish-grade" placeholder="Türkçe Notu">
+                    <input type="text" data-grade id="science-grade" placeholder="Fen Notu">
+                    
+                    <button type="submit" id="add-student">Öğrenci Ekle</button>
+                    <span class="alert-span"></span>
+
+                </form>
+                
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
