@@ -1,0 +1,26 @@
+Kodu tarayıcıda çalıştırdığımda işlevselliğinin doğru olup olmadığını kullanıcı olarak denemeye başladım. Tespit ettiğim yanlışlar şunlardı: 
+-Sepete Ekle butonuna bastığımda ürün stok miktarlarının azalmadığını fark ettim.
+-Sepete ekle butonuna bastığımda ürünün sürekli sepete eklendiğini ve sepete eklenen adedin ürün stoğunu geçtiğini fark ettim.
+-Ürünlerin sepete ekle butonuna 1 kere bastığımda toplam miktarın doğru hesaplandığını ancak birden fazla kez bastığımda toplam miktarın basma 
+sayım ile hesaplanmadığını fark ettim. Ürünlerin fiyatlarının 1 er tanesiyle hesaplandıgını gördüm.
+
+
+Fark ettiğim yanlışlar Sepete eklenince ortaya çıktığı için sepete ekleme yapan fonksiyona(addItem) debugger koydum.
+Öncelikle quantity ve stok değerlerini takip etmem gerektiği için kodu satır satır sırayla adımladım. Adımlarken stock değerine dikkat ettim. 
+DevToolsun "scope" penceresinde product nesnesine ait stock değerini (product-stock) gördüm. Sepete ekle butonuna bastım adımlamayı baslattım.
+ product-stock değerinin son değerini gördükten sonra debuggingi durdurup tekrar sepete ekle butonuna bastım ve adımladım. Butona bastıkça stock 
+ değerinin azalmadığını teyit etmiş oldum. 31.satırda "product.stock -= quantity;" kodunu ekledim. Sepete bastıkca stok azalmaya basladı fakat stock 
+ değeri 1 iken stok yetersiz uyarısı aldım. bu sorunu çözmek için debuggeri durdurup selector ile butonu seçtim. "Event Listeners" tabında 
+ stockUpdate eventini gördüm. Tılayınca renderFunctionunu çağırdığını gördüm. renderFunction içinde buttona stock ===0 olduğunda disabled özelliği 
+ atandığını yakalamış oldum.  if bloğundaki product.stock <= quantity koşulunu < olarak güncelledim. 
+
+sepetten ürün sildiğimde stok artışı sağlanmama durumu için selector ile bu butonu seçtim. "Event Listeners" tabından removeItem() fonksiyonun 
+çağrıldığını gördüm. removeItem fonksiyonuna breakpoint koydum. Sil butonuna tıkladığımda removeItem() fonksiyonunda debugging başlamış oldu.
+ satır satır adımlarken item değerinde quantity değerinin doğru olduğunu teyit ettim. satır satır ilerlemeye devam ederken procudt.stock değerine, 
+ teyit ettiğim quantity değerinin eklenmediğini gördüm. product.stock += 1; satırını product.stock += item.quantity; ile değiştirdim. 
+
+ Ürünün toplam fiyatını hesaplayan calculateTotal() fonksiyonunda breakpoint koydum ve satır atır değerleri inceledim. sum değeri ürünün fiyatıyla 
+ sabit kalıyordu. kontrol etmek için "callstack" tabından kod akışının öncesini kontrol ettim. ürün fiyatının calculateTotal() fonksiyona
+  taşınmasında sorun bulamadım. sorunun calculateTotal() fonksiyonundaki matematiksel hesaplamada olduğunu saptadım. quantity değeri ile çarpma 
+ekledim.
+
