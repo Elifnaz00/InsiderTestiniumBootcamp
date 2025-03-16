@@ -1,5 +1,4 @@
 (() => {
-
     let appendLocation = ".ins-api-users";
 
     const $mainDiv = $(appendLocation);
@@ -10,17 +9,12 @@
 
     const $userContainer= $("<div>").attr('id', 'user-container');
     $mainDiv.append($userContainer);
-
  
     const init = () =>{
-       
-
         getUsers();  
         creatCss();
         setEvents();
     }
-
-   
 
     const getUsers = () =>{
 
@@ -38,12 +32,10 @@
        
     }
 
-   
-
     const getUsersPromise =(URL) => {
         let promise = new Promise(async (resolve, reject) => {
            
-                let response= await fetch(URL);
+            let response= await fetch(URL);
                 if (response.ok) {
 
                     let data = await response.json();
@@ -53,12 +45,7 @@
                     reject({
                         "statusCode" : response.status,
                         "errorMessage" : response.statusText
-                    })
-
-                }
-               
-                
-               
+                    })} 
         });
         promise.then(result => {
             createUI(result);
@@ -69,16 +56,12 @@
       }
 
 
-
-
- 
     const localStorageAdd = (key,data) =>{
        
         setWithExpiry(key, data, 1);  
         
     }
  
-
 
     const setWithExpiry = (key, value, ttl) =>{
         const now = new Date();
@@ -93,24 +76,19 @@
     }
 
 
-
     const localStorageGetItem = (key) => {
         const itemStr = localStorage.getItem(key)
         
         if (!itemStr) return null
         
-        const item = JSON.parse(itemStr)
-    
+        const item = JSON.parse(itemStr);
         const now = new Date()
-        
+
         return now.getTime() > item.expiry ? (localStorage.removeItem(key), null) : item.value;
+      } 
+
       
-} 
-
-
-
-   const createUI = (data) =>{
-     
+   const createUI = (data) =>{   
        
         data.forEach((element,index) => {
             const htmlContent=`
@@ -128,8 +106,6 @@
         $userContainer.append(htmlContent);
 
 
-
-
         let watchedElement= document.getElementById("user-container");
         const observer = new MutationObserver(mutationObserverStart);
 
@@ -141,11 +117,8 @@
     });
 }
 
-   
-
 
     const mutationObserverStart = (mutations) =>{
-
         for (let mutation of mutations) {
             if (mutation.type === "childList") {
                 if (!mutation.target.children.length) {
@@ -156,7 +129,6 @@
                 }
             }
 }}
-
 
 
     const showError = (error) =>{
@@ -171,9 +143,6 @@
         $mainDiv.after($alertDiv);
        
 }
-
-  
-    
 
     const creatCss = () =>{
         const css=`
@@ -192,17 +161,13 @@
         -moz-box-shadow: 1px 1px 16px -6px rgba(0, 0, 0, 0.5);
         }
 
-    
-
         .ins-api-users{
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         flex-wrap: wrap;
-        
-
-        }
+         }
         
         body{
         margin:0;
@@ -214,7 +179,6 @@
         display: flex;
         flex-direction: column;
         gap: 1rem;
-
         }
 
         .remove-user-btn{
@@ -225,44 +189,29 @@
         border-radius: 25%;
         width: 10rem;
         padding: 1rem;
-
         }
 
         .card-title{
         color: red;
         
         }
-
     
     `
-
     $("head").append($("<style>").html(css));
 }
-
-
 
     const setEvents = () =>{
 
     $(document).on( "click", ".remove-user-btn",function() {
         $(this).closest(".card").remove();
-
     })
 
     $(document).on( "click", ".refresh-card-btn", function(){
-
-       
         sessionStorage.setItem("session", "buttonclick");
     
         getUsers();
        
-
-
     });
-
 ;}
-
-
-
-
   init();
 })();
